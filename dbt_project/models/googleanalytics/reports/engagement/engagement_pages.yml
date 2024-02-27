@@ -1,0 +1,26 @@
+version: 2
+
+models:
+    - name: engagement_pages
+      description: 'Query to replicate part of the Engagement > Pages report in GA4'
+      columns:
+          - name: event_date
+            description: 'Date of the report'
+            tests:
+                - not_null
+          - name: page_location
+            description: 'Location of the page'
+          - name: page_path
+            description: 'Path of the page'
+          - name: views
+            description: 'Number of views'
+            tests:
+                - not_null
+          - name: total_users
+            description: 'Number of total users'
+            tests:
+                - not_null
+          - name: active_users
+            description: 'Number of active users'
+          - name: view_per_user
+            description: 'Views per user'

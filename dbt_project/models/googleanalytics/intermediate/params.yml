@@ -1,0 +1,44 @@
+version: 2
+
+models:
+    - name: parameters_query
+      description: 'Query adapting the GA4 schema into a flat table with traffic source fields'
+      columns:
+          - name: event_timestamp
+            description: 'Timestamp of the event'
+            tests:
+                - not_null
+          - name: event_date
+            description: 'Date of the event'
+            tests:
+                - not_null
+          - name: event_name
+            description: 'Name of the event'
+            tests:
+                - not_null
+          - name: page_path
+            description: 'Path of the page'
+          - name: page_location
+            description: 'URL of the page'
+          - name: user_pseudo_id
+            description: 'Pseudo ID of the user'
+            tests:
+                - not_null
+          - name: session_id
+            description: 'ID of the session'
+            tests:
+                - not_null
+          - name: session_engaged
+            description: 'Whether the session was engaged'
+          - name: page_referrer
+            description: 'Traffic source Referrer of the page'
+          - name: entrances
+            description: 'Traffic source Number of entrances'
+          - name: event_source
+            description: 'Traffic source Source of the event'
+          - name: event_medium
+            description: 'Traffic source Medium of the event'
+          - name: session_source
+            description: 'Traffic source Source of the session'
+          - name: session_medium
+            description: 'Traffic source Medium of the session'

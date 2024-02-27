@@ -1,0 +1,20 @@
+version: 2
+
+models:
+    - name: traffic_acquisition
+      description: 'Query to replicate part of the Traffic Acquisition report in GA4'
+      columns:
+          - name: event_date
+            description: 'Date of the report'
+            tests:
+                - not_null
+          - name: session_source_medium
+            description: 'Source and medium of the session'
+          - name: total_users
+            description: 'Number of users'
+            tests:
+                - not_null
+          - name: sessions
+            description: 'Number of sessions'
+          - name: engaged_sessions
+            description: 'Number of engaged sessions'

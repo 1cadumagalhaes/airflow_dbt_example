@@ -1,0 +1,22 @@
+version: 2
+
+models:
+    - name: engagement_events
+      description: 'Query to replicate part of the Engagement > Events report in GA4'
+      columns:
+          - name: event_date
+            description: 'Date of the report'
+            tests:
+                - not_null
+          - name: event_name
+            description: 'Name of the event'
+            tests:
+                - not_null
+          - name: total_users
+            description: 'Number of total users'
+            tests:
+                - not_null
+          - name: event_count_per_user
+            description: 'Number of events per user'
+            tests:
+                - not_null
